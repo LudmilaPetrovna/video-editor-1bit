@@ -1,0 +1,1 @@
+gcc -o overlay overlay.c -Wall && ffmpeg -i buck.gif -f rawvideo -pix_fmt gray -s 128x64 - | ./overlay 10 240 font/Bubblegum.ch8 | ffmpeg -f rawvideo -pix_fmt gray -s 128x64 -r 10 -i - -vf "scale=512:-1:flags=neighbor" -y buck-overlay.gif;gifsicle --colors 255 -o buck-overlay-255.gif buck-overlay.gif;gifsicle --colors 2 -U -o buck-overlay-sicled.gif buck-overlay-255.gif
