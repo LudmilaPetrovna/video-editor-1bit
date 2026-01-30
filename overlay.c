@@ -7,7 +7,7 @@
 #define IN_WIDTH 128
 #define IN_HEIGHT 64
 
-#define SAMPLERATE 8000
+#define SAMPLERATE 48000
 #define CHANNELS 1
 #define SOUND_FILE_SIZE 50000000
 
